@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{353D8EBF-7689-4051-A292-909C5ADB37AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{31C420B3-EA3E-4EF8-8F14-7B83993B5808}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{877F6DB7-0E25-4C33-A1B2-E48540E290CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFrontend", "WebFrontend\WebFrontend.csproj", "{F364B1F7-A319-4841-8E39-971DD528C0B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolERP.API", "SchoolERP.API\SchoolERP.API.csproj", "{84B9F132-4945-4F1A-88D3-A59344FF7615}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolERP.Domain", "SchoolERP.Domain\SchoolERP.Domain.csproj", "{7D8D55E1-8DD1-4008-8AA2-4A6B7CA9D15E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolERP.Persistent", "SchoolERP.Persistent\SchoolERP.Persistent.csproj", "{8B170146-986F-43B2-ADE0-F07AB8923CCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolERP.Services", "SchoolERP.Services\SchoolERP.Services.csproj", "{EDD80A42-75B2-48E9-ADBA-FA176A41C1BD}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F364B1F7-A319-4841-8E39-971DD528C0B6} = {353D8EBF-7689-4051-A292-909C5ADB37AA}
+		{84B9F132-4945-4F1A-88D3-A59344FF7615} = {31C420B3-EA3E-4EF8-8F14-7B83993B5808}
+		{7D8D55E1-8DD1-4008-8AA2-4A6B7CA9D15E} = {877F6DB7-0E25-4C33-A1B2-E48540E290CC}
+		{8B170146-986F-43B2-ADE0-F07AB8923CCE} = {877F6DB7-0E25-4C33-A1B2-E48540E290CC}
+		{EDD80A42-75B2-48E9-ADBA-FA176A41C1BD} = {877F6DB7-0E25-4C33-A1B2-E48540E290CC}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84B9F132-4945-4F1A-88D3-A59344FF7615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B9F132-4945-4F1A-88D3-A59344FF7615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B9F132-4945-4F1A-88D3-A59344FF7615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B9F132-4945-4F1A-88D3-A59344FF7615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D8D55E1-8DD1-4008-8AA2-4A6B7CA9D15E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D8D55E1-8DD1-4008-8AA2-4A6B7CA9D15E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D8D55E1-8DD1-4008-8AA2-4A6B7CA9D15E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D8D55E1-8DD1-4008-8AA2-4A6B7CA9D15E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F364B1F7-A319-4841-8E39-971DD528C0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F364B1F7-A319-4841-8E39-971DD528C0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F364B1F7-A319-4841-8E39-971DD528C0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F364B1F7-A319-4841-8E39-971DD528C0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B170146-986F-43B2-ADE0-F07AB8923CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B170146-986F-43B2-ADE0-F07AB8923CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B170146-986F-43B2-ADE0-F07AB8923CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B170146-986F-43B2-ADE0-F07AB8923CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD80A42-75B2-48E9-ADBA-FA176A41C1BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD80A42-75B2-48E9-ADBA-FA176A41C1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD80A42-75B2-48E9-ADBA-FA176A41C1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD80A42-75B2-48E9-ADBA-FA176A41C1BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+EndGlobal
