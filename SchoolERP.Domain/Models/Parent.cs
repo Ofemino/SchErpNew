@@ -1,6 +1,6 @@
+
 namespace SchoolERP.Domain.Models;
 
-public class Parent:Person
+public class Parent : Person
 {
-    
 }

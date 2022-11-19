@@ -6,4 +6,5 @@ public class ResponseObject<T> where T : class
     public List<T>? ObjectResponseList { get; set; }
     public int ReturnedObjectCount { get; set; }
     public int StatusCde { get; set; }
+    public string? ResponseMessage { get; set; }
 }
