@@ -1,5 +1,3 @@
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.CompilerServices;
 using Microsoft.Extensions.Logging;
 using SchoolERP.Domain.Dtos;
 using SchoolERP.Domain.Dtos.Out;
@@ -48,10 +46,11 @@ public class StudentServices : IStudentServices
         try
         {
         }
-        catch (Exception exception)
+        catch (Exception ex)
         {
-            Console.WriteLine(exception);
-        }
+            _logger.LogError(ex.ToString());
+            return new ResponseObject<StudentDtoOut>
+                { ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}" };}
 
         return _response;
     }
@@ -65,8 +64,25 @@ public class StudentServices : IStudentServices
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex);
+            _logger.LogError(ex.ToString());
+            return new ResponseObject<StudentDtoOut>
+                { ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}" }; }
+
+        return _response;
+    }
+
+    public async Task<ResponseObject<StudentDtoOut>> GetStudentByName(string name)
+    {
+        _response = new ResponseObject<StudentDtoOut>();
+        try
+        {
+            throw new NotImplementedException();
         }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex.ToString());
+            return new ResponseObject<StudentDtoOut>
+                { ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}" };  }
 
         return _response;
     }

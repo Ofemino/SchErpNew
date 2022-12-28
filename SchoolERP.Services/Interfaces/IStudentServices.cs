@@ -8,5 +8,5 @@ public interface IStudentServices
     Task<ResponseObject<StudentDtoOut>> GetStudents();
     Task<ResponseObject<StudentDtoOut>> GetStudentById(long id);
     Task<ResponseObject<StudentDtoOut>> GetStudentByClass(string className);
+    Task<ResponseObject<StudentDtoOut>> GetStudentByName(string name);
 }
-

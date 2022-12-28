@@ -62,4 +62,19 @@ public class StudentController : ControllerBase
         }
         return BadRequest();
     }
+    
+    [HttpGet("GetStudentsByName/{name}")]
+    public async Task<IActionResult> GetStudentsByName(string name){
+        try
+        {
+            var students = await _studentServices.GetStudentByName(name);
+            return Ok(students);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError("Error getting all students. ex : {S}", ex.ToString());
+            Console.WriteLine(ex);
+        }
+        return BadRequest();
+    }
 }
