@@ -45,12 +45,14 @@ public class StudentServices : IStudentServices
         _response = new ResponseObject<StudentDtoOut>();
         try
         {
+            var student = await _repository.GetStudentById(id);
         }
         catch (Exception ex)
         {
             _logger.LogError(ex.ToString());
             return new ResponseObject<StudentDtoOut>
-                { ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}" };}
+                { ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}" };
+        }
 
         return _response;
     }
@@ -66,7 +68,8 @@ public class StudentServices : IStudentServices
         {
             _logger.LogError(ex.ToString());
             return new ResponseObject<StudentDtoOut>
-                { ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}" }; }
+                { ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}" };
+        }
 
         return _response;
     }
@@ -82,7 +85,8 @@ public class StudentServices : IStudentServices
         {
             _logger.LogError(ex.ToString());
             return new ResponseObject<StudentDtoOut>
-                { ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}" };  }
+                { ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}" };
+        }
 
         return _response;
     }
