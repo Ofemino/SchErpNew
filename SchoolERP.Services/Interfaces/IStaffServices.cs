@@ -8,4 +8,5 @@ public interface IStaffServices
     Task<ResponseObject<StaffDtoOut>> GetStaffs();
     Task<ResponseObject<StaffDtoOut>> GetStaffById(long id);
     Task<ResponseObject<StaffDtoOut>> GetStaffByClass(string className);
+    Task<ResponseObject<StaffDtoOut>> GetStaffByName(string name);
 }

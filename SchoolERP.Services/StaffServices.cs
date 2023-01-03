@@ -9,14 +9,12 @@ namespace SchoolERP.Services;
 
 public class StaffServices : IStaffServices
 {
-    private readonly IConfiguration _configuration;
     private readonly ILogger<StaffServices> _logger;
     private readonly IStaffRepository _repository;
     private ResponseObject<StaffDtoOut> _response;
 
-    public StaffServices(IConfiguration configuration, ILogger<StaffServices> logger, IStaffRepository repository)
+    public StaffServices(ILogger<StaffServices> logger, IStaffRepository repository)
     {
-        _configuration = configuration;
         _logger = logger;
         _repository = repository;
     }
@@ -29,10 +27,10 @@ public class StaffServices : IStaffServices
             var staffs = await _repository.GetStaffs();
             if (staffs.Count > 0)
             {
-                return new ResponseObject<StaffDtoOut> { ObjectResponseList = staffs, ResponseMessage = "Has records.", ReturnedObjectCount = staffs.Count(), StatusCode = HttpStatusCode.OK};
+                return new ResponseObject<StaffDtoOut> { ObjectResponseList = staffs, ResponseMessage = "Has records.", ReturnedObjectCount = staffs.Count(), StatusCode = (int)HttpStatusCode.OK};
             }
 
-            return new ResponseObject<StaffDtoOut> { ObjectResponseList = null, ResponseMessage = "Has no record.", ReturnedObjectCount = staffs.Count(), StatusCode = HttpStatusCode.NoContent};
+            return new ResponseObject<StaffDtoOut> { ObjectResponseList = null, ResponseMessage = "Has no record.", ReturnedObjectCount = staffs.Count(), StatusCode = (int)HttpStatusCode.NoContent};
         }
         catch (Exception ex)
         {
@@ -40,7 +38,7 @@ public class StaffServices : IStaffServices
             return new ResponseObject<StaffDtoOut>
             {
                 ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}",
-                StatusCode = HttpStatusCode.InternalServerError
+                StatusCode = (int)HttpStatusCode.InternalServerError
             };
         }
 
@@ -55,7 +53,7 @@ public class StaffServices : IStaffServices
             var staff = await _repository.GetStaffById(id);
             if (staff != null)
             {
-                return new ResponseObject<StaffDtoOut> { ObjectResponse = staff, ResponseMessage = "Has records.",  StatusCode = HttpStatusCode.OK};
+                return new ResponseObject<StaffDtoOut> { ObjectResponse = staff, ResponseMessage = "Has records.",  StatusCode = (int)HttpStatusCode.OK};
             }
             return new ResponseObject<StaffDtoOut> { ObjectResponse = staff, ResponseMessage = "Has no record."};
         }
@@ -65,7 +63,7 @@ public class StaffServices : IStaffServices
             return new ResponseObject<StaffDtoOut>
             {
                 ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}",
-                StatusCode = HttpStatusCode.InternalServerError
+                StatusCode = (int)HttpStatusCode.InternalServerError
             };
         }
 
@@ -80,10 +78,10 @@ public class StaffServices : IStaffServices
             var staffs = await _repository.GetStaffByClass(className);
             if (staffs.Count > 0)
             {
-                return new ResponseObject<StaffDtoOut> { ObjectResponseList = staffs, ResponseMessage = "Has records.", ReturnedObjectCount = staffs.Count(), StatusCode = HttpStatusCode.OK};
+                return new ResponseObject<StaffDtoOut> { ObjectResponseList = staffs, ResponseMessage = "Has records.", ReturnedObjectCount = staffs.Count(), StatusCode = (int)HttpStatusCode.OK};
             }
 
-            return new ResponseObject<StaffDtoOut> { ObjectResponseList = null, ResponseMessage = "Has no record.", ReturnedObjectCount = staffs.Count(), StatusCode = HttpStatusCode.NoContent};
+            return new ResponseObject<StaffDtoOut> { ObjectResponseList = null, ResponseMessage = "Has no record.", ReturnedObjectCount = staffs.Count(), StatusCode = (int)HttpStatusCode.NoContent};
 
         }
         catch (Exception ex)
@@ -92,7 +90,7 @@ public class StaffServices : IStaffServices
             return new ResponseObject<StaffDtoOut>
             {
                 ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}",
-                StatusCode = HttpStatusCode.InternalServerError
+                StatusCode = (int)HttpStatusCode.InternalServerError
             };
         }
 
@@ -107,9 +105,9 @@ public class StaffServices : IStaffServices
             var staffs = await _repository.GetStaffByClass(name);
             if (staffs.Count > 0)
             {
-                return new ResponseObject<StaffDtoOut> { ObjectResponseList = staffs, ResponseMessage = "Has records.", ReturnedObjectCount = staffs.Count(), StatusCode = HttpStatusCode.OK};
+                return new ResponseObject<StaffDtoOut> { ObjectResponseList = staffs, ResponseMessage = "Has records.", ReturnedObjectCount = staffs.Count(), StatusCode = (int)HttpStatusCode.OK};
             }
-            return new ResponseObject<StaffDtoOut> { ObjectResponseList = staffs, ResponseMessage = "Has no record.", ReturnedObjectCount = staffs.Count(), StatusCode = HttpStatusCode.NoContent};
+            return new ResponseObject<StaffDtoOut> { ObjectResponseList = staffs, ResponseMessage = "Has no record.", ReturnedObjectCount = staffs.Count(), StatusCode = (int)HttpStatusCode.NoContent};
         }
         catch (Exception ex)
         {
@@ -117,7 +115,7 @@ public class StaffServices : IStaffServices
             return new ResponseObject<StaffDtoOut>
             {
                 ObjectResponseList = null, ResponseMessage = $"Error : {ex.Message}",
-                StatusCode = HttpStatusCode.InternalServerError
+                StatusCode = (int)HttpStatusCode.InternalServerError
             };
         }
 
